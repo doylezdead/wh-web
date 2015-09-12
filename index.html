@@ -5,15 +5,18 @@
                   content="text/html; charset=utf-8" />
                   
 		<link type="text/css" rel="stylesheet" href="wordhunter.css"/>
-		<script type='text/template' id="searchTemplate" src="/templates/searchTemplate.html"></script>
-
+		<script type='text/template' id="searchTemplate">
+			<input type="text" id="searchField" placeholder="Type something to search"/>
+			<input type="submit" id="searchSubmit" value="Search"/>
+		</script>
+		
 		<script type='text/javascript' src="/js/underscore.js.css"></script>
 		<script type='text/javascript' src="/js/jquery-1.11.3.js.css"></script>
 		<script type='text/javascript' src="/js/json2.js"></script>
 		<script type='text/javascript' src="/js/handlebars-v4.0.2.js"></script>
 		<script type='text/javascript' src="/js/backbone.js.css"></script>
 		
-		<script type='text/javascript' src="/js/searchModel.js"></script>
+		<script type='text/javascript' src="js/searchModel.js"></script>
 		<script type='text/javascript' src="/js/router.js"></script>
 		<script type='text/javascript' src="/js/searchView.js"></script>
 		<script type='text/javascript' src="/js/wordhunter.js"></script>
