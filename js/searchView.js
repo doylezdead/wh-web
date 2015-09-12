@@ -6,7 +6,10 @@ var SearchView = Backbone.View.extend({
 	},
 	
 	render: function(){
-		this.$el.html(this.template(this.model.toJSON()));
+		 $.get('/templates/searchTemplate', function (data) {
+            template = Handlebars.compile( $(data).html());
+            this.$el.html(template);  
+        }, 'html');
         return this;
 	}
 });
