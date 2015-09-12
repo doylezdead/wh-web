@@ -2,13 +2,18 @@
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="wordhunter.css"/>
+		
+		<script src="/js/backbone.js.css"></script>
+		<script src="/js/underscore.js.css"></script>
+		<script src="/js/jquery-1.11.3.js.css"></script>
+		<script src="/js/json2.js"></script>
+		
+		<template id="searchTemplate" src="/templates/searchTemplate.html"/>
+		
 		<title>WordHunter</title>
 		<h1><strong>WordHunter.co</strong></h1>
 	</head>
 	<body>
-		<div class="container">
-			<input type="text" id="searchField" placeholder="Type something to search"/>
-			<input type="submit" id="searchSubmit" value="Search"/>
-		</div> 
+		<div id="mainContainer"/>
 	</body>
 </html>
