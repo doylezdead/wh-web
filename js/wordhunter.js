@@ -4,5 +4,5 @@ $(document).ready(function(){
 	
 	var model = new searchModel();
 	var searchView = new SearchView({ model: model});
-	$("#mainContainer").html(searchView.el);
+	$("#mainContainer").html(searchView.render().el);
 });
