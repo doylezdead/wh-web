@@ -1,6 +1,10 @@
 var SearchView = Backbone.View.extend({	
 	template: Handlebars.compile( $("#searchTemplate").html()),
-
+	
+	events: {
+		'click #searchSubmit' : 'submit'
+	},
+	
 	initialize: function(){
 		this.render();
 	},
@@ -8,5 +12,18 @@ var SearchView = Backbone.View.extend({
 	render: function(){
 		this.$el.html(this.template(this.model.toJSON()));
         return this;
+	},
+	
+	submit: function(){
+		var synonym = $('#searchField').val();
+		this.model.url = this.model.urlRoot + '?synonym=' + synonym;
+		
+		this.model.save({
+			wait: true,
+			success: 
+				function(model, response){
+					console.log("Success");
+				}
+		});
 	}
 });
