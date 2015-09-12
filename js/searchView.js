@@ -16,7 +16,7 @@ var SearchView = Backbone.View.extend({
 	
 	submit: function(){
 		var synonym = $('#searchField').val();
-		this.model.url = this.model.urlRoot + '?synonym=' + synonym;
+		this.model.url = this.model.urlRoot + '?word=' + synonym;
 		
 		this.model.save({
 			wait: true,
