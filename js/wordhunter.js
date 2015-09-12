@@ -1,4 +1,4 @@
 $(document).ready(function(){
-	searchView = new SearchView();
+	var searchView = new SearchView();
 	$("#mainContainer").html(searchView.el);
-})
+});
