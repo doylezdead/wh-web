@@ -1,3 +1,3 @@
 var searchModel = Backbone.Model.extend({
-	urlRoot: 'http://wordhunter.co/synonym:60606',
+	urlRoot: 'http://wordhunter.co:60606/synonym',
 });
