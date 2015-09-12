@@ -3,5 +3,6 @@ $(document).ready(function(){
 	//Backbone.history.start();
 	
 	var model = new searchModel();
-	var searchView = new SearchView({ model: model, el: '#mainContainer'});
+	var searchView = new SearchView({ model: model});
+	$("#mainContainer").html(searchView.render().el);
 });
