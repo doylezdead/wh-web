@@ -1,4 +1,4 @@
 $(document).ready(function(){
-	searchView = new SearchView();
+	searchView = new SearchView({ el: $("#mainContainer") });
 
 })
