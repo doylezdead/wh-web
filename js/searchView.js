@@ -1,9 +1,10 @@
 var SearchView = Backbone.View.extend({
 	el: '#mainContainer',
-	template: _.template($('#searchTemplate').html()),
+	
 	
 	initialize: function(){
-	this.render();
+		this.template = _.template($('#searchTemplate').html()),
+		this.render();
 	},
 	
 	render: function(){
