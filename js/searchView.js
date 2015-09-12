@@ -1,7 +1,7 @@
 var SearchView = Backbone.View.extend({	
 	
 	initialize: function(){
-		this.template = _.template($('#searchTemplate').html());
+		Handlebars.compile( $("#searchTemplate").html() );
 		this.render();
 	},
 	
