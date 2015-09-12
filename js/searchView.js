@@ -1,5 +1,5 @@
 var SearchView = Backbone.View.extend({
-	el: '#mainContainer',
+	$el: $('#mainContainer'),
 	
 	
 	initialize: function(){
