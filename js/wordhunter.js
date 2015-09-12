@@ -1,4 +1,4 @@
 $(document).ready(function(){
-	var searchView = new SearchView();
-	$("#mainContainer").html(searchView.el);
+	var router = new Router();
+	Backbone.history.start();
 });
