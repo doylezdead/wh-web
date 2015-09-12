@@ -5,10 +5,11 @@ var SearchView = Backbone.View.extend({
 	},
 	
 	render: function(){
+		 var that = this;
 		 $.get('templates/searchTemplate.html', function (data) {
             template = Handlebars.compile( $(data).html());
-            this.$el.html(template);  
+            that.$el.html(template);  
         }, 'html');
-        return this;
+        return that;
 	}
 });
