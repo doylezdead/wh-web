@@ -12,11 +12,18 @@ h1{
 
 #searchField{
     width: 25%;
-    background-color: green;
 }
 
 #searchSubmit{
     font-size: 20px;
+}
+
+#resultsContainer{
+	width: 150px;
+}
+
+ul{
+	list-style-type: none;
 }
 
 li{
@@ -24,6 +31,6 @@ li{
 	border-style: solid;
 	border-width: 4px;
 	background-color: #0099FF;
-	padding-top: 15px;
+	margin-top: 15px;
 	
 }
