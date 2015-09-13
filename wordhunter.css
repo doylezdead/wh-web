@@ -19,7 +19,8 @@ h1{
 }
 
 #resultsContainer{
-	width: 50%;
+	width: 100%;
+	text-align: center;
 }
 
 ul{
@@ -28,10 +29,12 @@ ul{
 
 li{
 	height: 50px;
+	width: 50%;
 	border-style: solid;
-	border-radius: 2px;
-	border-width: 1px;
+	border-radius: 3px;
+	border-width: 1.5px;
 	background-color: #99D6FF;
 	margin-top: 15px;
-	
+	display: inline-block;
+	text-align: left;
 }

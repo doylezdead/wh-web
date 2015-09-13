@@ -14,7 +14,11 @@
 			<ul>
 				{{#each response}}
 					<li>
-						<a target="blank" href='{{this.url}}'>{{this.title}}</a>
+						<div class='listItem'>
+							<span>{{this.title}}</span><br>
+							<span>{{this.url}}</span><br>
+							<span>{{this.summary}}</span>
+						</div>
 					</li>
 				{{/each}}
 			</ul>
