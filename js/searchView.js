@@ -33,6 +33,6 @@ var SearchView = Backbone.View.extend({
 	},
 	
 	displayResults: function(){
-		var resultsView = new ResultsView({response: response});
+		var resultsView = new ResultsView({'response': 'response'});
 	}	
 });
