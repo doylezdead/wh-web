@@ -43,6 +43,7 @@ var ResultsView = Backbone.View.extend({
 			success: function(model, response){
 				var mod = model.toJSON();
 				that.response[articleInd].rating = model.toJSON();
+			}
 		});
 	}
 });
