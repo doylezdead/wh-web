@@ -2,7 +2,7 @@ var ResultsView = Backbone.View.extend({
 	template: Handlebars.compile( $("#resultsTemplate").html()),
 
 	initialize: function(options){
-		this.results = options.results;
+		this.response = options.response;
 		this.render();		
 	},
 	

@@ -16,8 +16,8 @@ var SearchView = Backbone.View.extend({
 	},
 	
 	submit: function(){
-		var synonym = $('#searchField').val();
-		this.model.url = this.model.urlRoot + '?word=' + synonym;
+		var word = $('#searchField').val();
+		this.model.url = this.model.urlRoot + '?word=' + word;
 		
 		var that = this;
 		this.model.fetch({
@@ -25,13 +25,14 @@ var SearchView = Backbone.View.extend({
 			success: function(model, response){
 				response = $.map(model.toJSON(), function(val, i){
 					return val;
-				});		
+				});	
+			console.log(response);	
 			that.displayResults();
 			}
 		});
 	},
 	
 	displayResults: function(){
-		var resultsView = new ResultsView({results: results});
+		var resultsView = new ResultsView({response: response});
 	}	
 });
