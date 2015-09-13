@@ -45,8 +45,10 @@ li{
 
 .listData{
 	display: table-cell;
+	width: 80%;
 }
 
 .listRating{
 	display: table-cell;
+	width: 20%;
 }
