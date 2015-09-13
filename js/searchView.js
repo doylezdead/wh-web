@@ -19,13 +19,14 @@ var SearchView = Backbone.View.extend({
 		var synonym = $('#searchField').val();
 		this.model.url = this.model.urlRoot + '?word=' + synonym;
 		
+		var that = this;
 		this.model.fetch({
 			wait: true,
 			success: function(model, response){
 				response = $.map(model.toJSON(), function(val, i){
 					return val;
 				});		
-			displayResults();
+			that.displayResults();
 			}
 		});
 	},
