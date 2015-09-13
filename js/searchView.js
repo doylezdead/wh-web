@@ -22,9 +22,9 @@ var SearchView = Backbone.View.extend({
 		this.model.fetch({
 			wait: true,
 			success: function(){
-				response = $.map(this.model.toJSON(), function(val, i){
+				response = $.map(this.model.toJSON(), $.proxy(function(val, i){
 					return val;
-				}, this);		
+				}, this));		
 				console.log(response);
 			}
 		});
