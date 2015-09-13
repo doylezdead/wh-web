@@ -12,6 +12,7 @@ h1{
 
 #searchField{
     width: 25%;
+    background-color: green;
 }
 
 #searchSubmit{
