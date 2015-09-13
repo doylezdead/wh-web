@@ -36,7 +36,7 @@ var ResultsView = Backbone.View.extend({
 	
 	updateRating: function(target, value){
 		var articleInd = $('li').index(target.closest('li'));
-		var articleId = this.response[articleInd].key('_id');
+		var articleId = this.response[articleInd]._id;
 		this.model.url = this.model.urlRoot + '?article=' + articleId + '&value=' + value;
 		this.model.fetch({});
 	}
