@@ -38,6 +38,12 @@ var ResultsView = Backbone.View.extend({
 		var articleInd = $('li').index(target.closest('li'));
 		var articleId = this.response[articleInd]._id;
 		this.model.url = this.model.urlRoot + '?article=' + articleId + '&value=' + value;
-		this.model.fetch({});
+		var that = this;
+		this.model.fetch({
+			success: function(model, response){
+				that.response[articleInd].rating = model.rate;
+				that.trigger('rerender');
+			}
+		});
 	}
 });
