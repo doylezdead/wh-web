@@ -116,3 +116,11 @@ li{
 .downArrow, .upArrow:hover{
 	cursor: pointer;
 }
+
+.purple{
+	color: gba(99,35,122,1);
+}
+
+.orange{
+	color: orange;
+}
