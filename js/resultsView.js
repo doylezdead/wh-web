@@ -19,7 +19,9 @@ var ResultsView = Backbone.View.extend({
 	toggleArrow: function(event){
 		target = $(event.target);
 		parent = target.closest('.arrows');
-
+		
+		console.log($('li').index(target.closest('li')));
+		
 		if(target.hasClass('upArrow')){
 			target.toggleClass('orange');
 			$($(parent).find('.downArrow')).removeClass('purple');
