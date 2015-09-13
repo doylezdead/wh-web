@@ -6,7 +6,7 @@ var ResultsView = Backbone.View.extend({
 	},
 	
 	render: function(options){
-		this.$el.html(this.template(this.response));
+		this.$el.html(this.template({response: this.response));
         return this;
         
 	}
