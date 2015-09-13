@@ -38,3 +38,15 @@ li{
 	display: inline-block;
 	text-align: left;
 }
+
+.listItem{
+	display: table-row;
+}
+
+.listData{
+	display: table-cell;
+}
+
+.listRating{
+	display: table-cell;
+}

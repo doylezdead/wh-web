@@ -15,9 +15,13 @@
 				{{#each response}}
 					<li>
 						<div class='listItem'>
-							<span>{{this.title}}</span><br>
-							<span>{{this.site}}</span><br>
-							<span>Rating: {{this.rating}} out of 5</span>
+							<div class='listData'>
+								<span>{{this.title}}</span><br>
+								<span>{{this.site}}</span><br>
+								<span>Rating: {{this.rating}} out of 5</span>
+							</div>
+							<div class='listRating'>
+							</div>
 						</div>
 					</li>
 				{{/each}}
