@@ -11,9 +11,13 @@
 		</script>
 		
 		<script type='text/template' id="resultsTemplate">
-			{{#each response}}
-				<a href='{{this.url}}'>{{this.title}}</a>
-			{{/each}}
+			<ul>
+				{{#each response}}
+					<li>
+						<a href='{{this.url}}'>{{this.title}}</a>
+					</li>
+				{{/each}}
+			</ul>
 		</script>
 		<script type='text/javascript' src="js/underscore.js.css"></script>
 		<script type='text/javascript' src="js/jquery-1.11.3.js.css"></script>
