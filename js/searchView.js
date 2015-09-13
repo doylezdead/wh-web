@@ -38,10 +38,5 @@ var SearchView = Backbone.View.extend({
 		var resultsModel = new ResultsModel();
 		var resultsView = new ResultsView({model: resultsModel, response: response});
 		$('#resultsContainer').html(resultsView.render().el);
-		resultsView.on('rerender', this.rerenderResults(resultsView));
-	},
-	
-	rerenderResults: function(resultsView){
-		$('#resultsContainer').html(resultsView.render().el);
-	}
+	}	
 });

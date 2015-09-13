@@ -2,7 +2,8 @@ var ResultsView = Backbone.View.extend({
 	template: Handlebars.compile( $("#resultsTemplate").html()),
 	
 	events: {
-		'click .upArrow, .downArrow' : 'toggleArrow',
+		'click .upArrow' : 'toggleArrow',
+		'click .downArrow' : 'toggleArrow'
 	},	
 	
 	initialize: function(options){
@@ -37,12 +38,6 @@ var ResultsView = Backbone.View.extend({
 		var articleInd = $('li').index(target.closest('li'));
 		var articleId = this.response[articleInd]._id;
 		this.model.url = this.model.urlRoot + '?article=' + articleId + '&value=' + value;
-		var that = this;
-		this.model.fetch({
-			success: function(model, response){
-				that.response[articleInd].rating = model.rate;
-				that.trigger('rerender');
-			}
-		});
+		this.model.fetch({});
 	}
 });
