@@ -31,7 +31,6 @@ var ResultsView = Backbone.View.extend({
 			this.updateRating(target, -1);
 		}
 		
-		
 	},
 	
 	updateRating: function(target, value){
@@ -41,8 +40,9 @@ var ResultsView = Backbone.View.extend({
 		var that = this;
 		this.model.fetch({
 			success: function(model, response){
-				var mod = model.toJSON();
-				that.response[articleInd].rating = model.toJSON();
+				that.response[articleInd].rating = model.toJSON().rating;
+				$($(target.closest('.listItem')).find('span')).html("Rating: " + 
+					model.toJSON().rating + " out of 5"); 
 			}
 		});
 	}
