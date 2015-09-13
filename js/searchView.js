@@ -29,7 +29,7 @@ var SearchView = Backbone.View.extend({
 	},
 	
 	displayResults: function(){
-		var resultsView = new ResultsView({'response': 'response'});
+		var resultsView = new ResultsView({response: this.response});
 		$('#resultsContainer').html(resultsView.render().el);
 	}	
 });
