@@ -1,6 +1,6 @@
 var SearchView = Backbone.View.extend({	
 	template: Handlebars.compile( $("#searchTemplate").html()),
-	response: [];
+	response: [],
 	
 	events: {
 		'click #searchSubmit' : 'submit'
