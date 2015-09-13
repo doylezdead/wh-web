@@ -58,3 +58,11 @@ li{
 	display: table-cell;
 	width: 20%;
 }
+
+.upArrow{
+	display: table-row;
+}
+
+.downArrow{
+	display: table-row;
+}
