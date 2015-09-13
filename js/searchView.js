@@ -24,7 +24,7 @@ var SearchView = Backbone.View.extend({
 			success: function(){
 				response = $.map(this.model.toJSON(), function(val, i){
 					return val;
-				}, true);		
+				}, this);		
 				console.log(response);
 			}
 		});
