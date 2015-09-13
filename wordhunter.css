@@ -39,6 +39,12 @@ li{
 	text-align: left;
 }
 
+.listTable{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
 .listItem{
 	display: table-row;
 }

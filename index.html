@@ -14,16 +14,18 @@
 			<ul>
 				{{#each response}}
 					<li>
-						<div class='listItem'>
-							<div class='listData'>
-								{{this.title}}<br>
-								{{this.site}}<br>
-								Rating: {{this.rating}} out of 5
+						<div class='listTable'>
+							<div class='listItem'>
+								<div class='listData'>
+									{{this.title}}<br>
+									{{this.site}}<br>
+									Rating: {{this.rating}} out of 5
+								</div>
+								<div class='listRating'>
+									Work
+								</div>
 							</div>
-							<div class='listRating'>
-								Work
-							</div>
-						</div>
+						<div>
 					</li>
 				{{/each}}
 			</ul>
