@@ -1,5 +1,6 @@
 var SearchView = Backbone.View.extend({	
 	template: Handlebars.compile( $("#searchTemplate").html()),
+	response: [];
 	
 	events: {
 		'click #searchSubmit' : 'submit'
@@ -20,10 +21,12 @@ var SearchView = Backbone.View.extend({
 		
 		this.model.fetch({
 			wait: true,
-			success: 
-				function(model, response){
-					console.log("Success");
-				}
+			success: function(){
+				response = $.map(this.model.toJSON(), function(val, i){
+					return val;
+				}, true);		
+				console.log(response);
+			}
 		});
 	}
 });
