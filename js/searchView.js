@@ -18,12 +18,14 @@ var SearchView = Backbone.View.extend({
 		this.model.url = this.model.urlRoot + '?word=' + word;
 		
 		var that = this;
+		$('#resultsContainer').append("<img src='ajax-loader.gif'/>' id='progress'");
 		this.model.fetch({
 			wait: true,
 			success: function(model, response){
 				var response = model.toJSON();
 				console.log(response);	
 				that.displayResults(response);
+				$('#progress').remove();
 			}
 		});
 	},

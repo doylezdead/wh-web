@@ -40,9 +40,9 @@ var ResultsView = Backbone.View.extend({
 		var that = this;
 		this.model.fetch({
 			success: function(model, response){
-				that.response[articleInd].rating = model.toJSON().rating;
+				that.response[articleInd].rating = model.toJSON().star;
 				$($(target.closest('.listItem')).find('span')).html("Rating: " + 
-					model.toJSON().rating + " out of 5"); 
+					model.toJSON().star + " out of 5"); 
 			}
 		});
 	}
