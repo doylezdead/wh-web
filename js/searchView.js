@@ -28,7 +28,8 @@ var SearchView = Backbone.View.extend({
 	},
 	
 	displayResults: function(response){
-		var resultsView = new ResultsView({response: response});
+		var resultsModel = new ResultsModel();
+		var resultsView = new ResultsView({model: resultsModel, response: response});
 		$('#resultsContainer').html(resultsView.render().el);
 	}	
 });
