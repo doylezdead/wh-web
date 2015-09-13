@@ -58,13 +58,22 @@ li{
 
 .listRating{
 	display: table-cell;
-	width: 20%;
+	width: 5%;
+	height: 100%;
+}
+
+.arrows{
+	display: table;
+	height: 100%;
+	table-layout: fixed;
 }
 
 .upArrow{
 	display: table-row;
+	height: 50%;
 }
 
 .downArrow{
 	display: table-row;
+	height: 50%;
 }
