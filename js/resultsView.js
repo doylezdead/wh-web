@@ -2,8 +2,7 @@ var ResultsView = Backbone.View.extend({
 	template: Handlebars.compile( $("#resultsTemplate").html()),
 	
 	events: {
-		'click .upArrow' : 'toggleArrow',
-		'click .downArrow' : 'toggleArrow'
+		'click .upArrow, .downArrow' : 'toggleArrow',
 	},	
 	
 	initialize: function(options){
