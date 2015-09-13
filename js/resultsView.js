@@ -20,13 +20,15 @@ var ResultsView = Backbone.View.extend({
 		target = $(event.target);
 		if(target.hasClass('upArrow')){
 			target.toggleClass('orange');
+				
+			target.toggleClass('orange');
 			var parentID = target.parent().attr('id');
-			$(parentID + ' .downArrow').toggleClass('purple');
+			$(parentID + '.purple').removeClass('purple');
 		}
 		else if(target.hasClass('downArrow')){
 			target.toggleClass('purple');
 			var parentID = target.parent().attr('id');
-			$(parentID + ' .upArrow').toggleClass('orange');
+			$(parentID + '.orange').removeClass('orange');
 		}
 	}
 });
