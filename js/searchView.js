@@ -32,7 +32,7 @@ var SearchView = Backbone.View.extend({
 		if(event.which === 13){
 			this.trigger('click #searchSubmit');
 		}
-	}
+	},
 	
 	displayResults: function(response){
 		var resultsModel = new ResultsModel();
