@@ -18,17 +18,16 @@ var ResultsView = Backbone.View.extend({
 	
 	toggleArrow: function(event){
 		target = $(event.target);
+		parent = target.closest('.arrows');
+
 		if(target.hasClass('upArrow')){
 			target.toggleClass('orange');
-				
-			target.toggleClass('orange');
-			parentID = target.parent().attr('id');
-			$(parentID + '.purple').removeClass('purple');
+			$($(parent).find('downArrow')).removeClass('purple');
 		}
 		else if(target.hasClass('downArrow')){
 			target.toggleClass('purple');
 			parentID = target.parent().attr('id');
-			$(parentID + '.orange').removeClass('orange');
+			$($(parent).find('upArrow')).removeClass('orange');
 		}
 	}
 });
