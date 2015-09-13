@@ -6,9 +6,7 @@ var SearchView = Backbone.View.extend({
 		'click #searchSubmit' : 'submit'
 	},
 	
-	initialize: function(){
-		this.render();
-	},
+	initialize: function(){},
 	
 	render: function(){
 		this.$el.html(this.template(this.model.toJSON()));
@@ -32,5 +30,6 @@ var SearchView = Backbone.View.extend({
 	
 	displayResults: function(){
 		var resultsView = new ResultsView({'response': 'response'});
+		$('#resultsContainer').html(resultsView.render().el);
 	}	
 });

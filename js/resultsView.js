@@ -3,7 +3,6 @@ var ResultsView = Backbone.View.extend({
 
 	initialize: function(options){
 		this.response = options.response;
-		this.render();		
 	},
 	
 	render: function(options){
