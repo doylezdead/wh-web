@@ -22,12 +22,12 @@ var ResultsView = Backbone.View.extend({
 			target.toggleClass('orange');
 				
 			target.toggleClass('orange');
-			var parentID = target.parent().attr('id');
+			parentID = target.parent().attr('id');
 			$(parentID + '.purple').removeClass('purple');
 		}
 		else if(target.hasClass('downArrow')){
 			target.toggleClass('purple');
-			var parentID = target.parent().attr('id');
+			parentID = target.parent().attr('id');
 			$(parentID + '.orange').removeClass('orange');
 		}
 	}
