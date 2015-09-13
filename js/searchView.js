@@ -2,7 +2,8 @@ var SearchView = Backbone.View.extend({
 	template: Handlebars.compile( $("#searchTemplate").html()),
 	
 	events: {
-		'click #searchSubmit' : 'submit'
+		'click #searchSubmit' : 'submit',
+		'keypress #searchField' : 'keypress'
 	},
 	
 	initialize: function(){},
@@ -26,6 +27,12 @@ var SearchView = Backbone.View.extend({
 			}
 		});
 	},
+	
+	keypress: function(event){
+		if(event.which === 13){
+			this.trigger('click #searchSubmit');
+		}
+	}
 	
 	displayResults: function(response){
 		var resultsModel = new ResultsModel();
