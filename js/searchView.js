@@ -25,8 +25,12 @@ var SearchView = Backbone.View.extend({
 				response = $.map(model.toJSON(), function(val, i){
 					return val;
 				});		
-				console.log(response);
+			this.displayResults();
 			}
 		});
-	}
+	},
+	
+	displayResults: function(){
+		var resultsView = new ResultsView({results: results});
+	}	
 });

@@ -10,6 +10,11 @@
 			<input type="submit" id="searchSubmit" value="Search"/>
 		</script>
 		
+		<script type='text/template' id="resultsTemplate">
+			{{#each results}}
+				<span>{{this}}</span>
+			{{/each}}
+		</script>
 		<script type='text/javascript' src="/js/underscore.js.css"></script>
 		<script type='text/javascript' src="/js/jquery-1.11.3.js.css"></script>
 		<script type='text/javascript' src="/js/json2.js"></script>
